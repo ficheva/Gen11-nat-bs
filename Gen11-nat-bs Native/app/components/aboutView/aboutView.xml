@@ -1,0 +1,30 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:widgets="utils/widgets" loaded="pageLoaded" actionBarHidden="true">
+
+    <GridLayout rows="auto, *">
+        <widgets:action-bar />
+        <StackLayout row="1">
+
+            <StackLayout margin="10">
+                <GridLayout rows="25, auto" columns="auto, auto">
+                    <Image rowSpan="2" src="~/resources/images.jpg" cssClass="about-image" />
+
+                    <Label col="1" text="My App" verticalAlignment="top" />
+
+                    <Label row="1" col="1" text="Version 1" verticalAlignment="top" />
+                </GridLayout>
+
+                <TextView text="App description" editable="false" />
+
+                <Button text="Contact us" tap="{{ onContactTap }}" />
+
+                <Button text="Like us on Facebook" tap="{{ onFacebookTap }}" />
+
+                <Button text="Follow us on Twitter" tap="{{ onTwitterTap }}" />
+            </StackLayout>
+            <!-- additional view content -->
+
+            <!-- START_CUSTOM_CODE_aboutView -->
+            <!-- END_CUSTOM_CODE_aboutView -->
+        </StackLayout>
+    </GridLayout>
+</Page>

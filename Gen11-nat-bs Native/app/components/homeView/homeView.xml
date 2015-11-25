@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:widgets="utils/widgets" loaded="pageLoaded" actionBarHidden="true">
+
+    <GridLayout rows="auto, *">
+        <widgets:action-bar />
+        <StackLayout row="1">
+            <!-- additional view content -->
+            <!-- START_CUSTOM_CODE_homeView -->
+            <!-- END_CUSTOM_CODE_homeView -->
+        </StackLayout>
+    </GridLayout>
+</Page>

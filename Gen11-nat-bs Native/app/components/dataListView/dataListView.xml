@@ -1,0 +1,36 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:widgets="utils/widgets" loaded="pageLoaded" actionBarHidden="true">
+
+    <GridLayout rows="auto, *">
+        <widgets:action-bar />
+        <StackLayout row="1">
+
+            <GridLayout rows="*">
+
+                <ListView items="{{ listItems }}" itemTap="onListViewItemTap">
+
+                    <ListView.itemTemplate>
+                        <GridLayout columns="48, 100, *" cssClass="padded-label">
+
+                            <Image col="0" width="32" height="32" margin="8 6" src="{{ icon }}" />
+
+
+                            <Image col="1" width="100" height="100" src="{{ image }}" />
+
+
+                            <StackLayout col="2" cssClass="padded-label-stack">
+                                <Label text="{{ header }}" cssClass="title-label" textWrap="true" />
+                                <Label text="{{ description }}" textWrap="true" />
+                            </StackLayout>
+
+                        </GridLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+                <ActivityIndicator busy="{{ isLoading }}" />
+            </GridLayout>
+            <!-- additional view content -->
+
+            <!-- START_CUSTOM_CODE_dataListView -->
+            <!-- END_CUSTOM_CODE_dataListView -->
+        </StackLayout>
+    </GridLayout>
+</Page>

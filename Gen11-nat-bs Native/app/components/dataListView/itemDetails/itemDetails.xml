@@ -1,0 +1,16 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:widgets="utils/widgets" navigatedTo="navigatedTo" actionBarHidden="true">
+    <GridLayout rows="auto, *">
+        <widgets:action-bar />
+        <StackLayout row="1">
+
+            <Image width="100" height="100" src="{{ image }}" />
+
+
+            <Label text="{{ subheader }}" />
+
+
+            <TextView text="{{ description }}" editable="false" />
+
+        </StackLayout>
+    </GridLayout>
+</Page>

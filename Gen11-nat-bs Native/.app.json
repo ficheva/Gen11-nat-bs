@@ -1,15 +1,134 @@
 {
   "type": "NativeScript",
-  "isNew": true,
+  "views": [
+    {
+      "type": "NativeScript:view",
+      "name": "homeView",
+      "components": [],
+      "title": "Home View",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "NativeScript:about",
+          "name": "aboutViewModel",
+          "appName": "My App",
+          "appVersion": "Version 1",
+          "appIcon": "images.jpg",
+          "appDescription": "App description",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "support@example.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/Telerik",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/telerik"
+        }
+      ],
+      "title": "About with icon",
+      "addToNavigation": true,
+      "icon": "info"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "authenticationView",
+      "components": [
+        {
+          "type": "NativeScript:authentication",
+          "name": "authenticationViewModel",
+          "dataProvider": "defaultProvider",
+          "emailLabel": "Email",
+          "passwordLabel": "Password",
+          "signinLabel": "Sign In",
+          "signinRedirect": "homeView",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "homeView",
+          "gotoSigninLabel": "Sign In"
+        }
+      ],
+      "title": "Authentication",
+      "addToNavigation": false
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "formView",
+      "components": [
+        {
+          "type": "NativeScript:form",
+          "components": [
+            {
+              "type": "NativeScript:field",
+              "name": "password",
+              "title": "Password",
+              "inputType": "password"
+            },
+            {
+              "type": "NativeScript:field",
+              "name": "paragraph",
+              "title": "Paragraph",
+              "inputType": "paragraph",
+              "value": "djfhgjdfh jdsfhgjdhsfgs\ndfgsdlkfgjsdg"
+            }
+          ],
+          "name": "formViewModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Form",
+      "addToNavigation": true,
+      "icon": "bookmarks"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "dataListView",
+      "components": [
+        {
+          "type": "NativeScript:list",
+          "name": "dataListViewModel",
+          "dataProvider": "defaultProvider",
+          "collection": "Activities",
+          "imageField": "Picture",
+          "headerField": "Text",
+          "subHeaderField": "UserId",
+          "iconField": true,
+          "masterDetails": true,
+          "detailSubHeaderField": "UserId",
+          "detailDescriptionField": "Text",
+          "detailImageField": "Picture",
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "title": "Data List",
+      "addToNavigation": true,
+      "icon": "organize"
+    }
+  ],
   "dataProviders": [
     {
       "type": "NativeScript:dataProvider",
-      "title": "DefaultProvider",
       "name": "defaultProvider",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "title": "DefaultProvider",
       "source": "everlive",
-      "offlineStorage": false,
       "everliveKey": "1OEkt5Nwsb8ghUGe",
-      "everliveUrl": ""
+      "offlineStorage": false
     }
-  ]
+  ],
+  "name": "nativeScriptApp",
+  "navigation": "listmenu",
+  "transition": "none",
+  "skin": "native"
 }
