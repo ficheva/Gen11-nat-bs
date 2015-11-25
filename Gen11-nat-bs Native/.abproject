@@ -1,0 +1,28 @@
+{
+  "ProjectName": "Gen11-nat-bs Native",
+  "ProjectGuid": "aa3a699b-82a1-4ab5-ac7a-79cd41e475b0",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.Gen11natbsNative",
+  "DisplayName": "Gen11-nat-bs Native",
+  "Author": "",
+  "Description": "Gen11-nat-bs Native",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "1.4.3",
+  "Framework": "NativeScript"
+}
